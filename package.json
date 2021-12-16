@@ -2,14 +2,18 @@
   "name": "nodeapi-industry_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --experimental-modules ."
   },
   "repository": {
     "type": "git",
     "url": "https://git.fhict.nl/I437950/nodeapi-industry_project.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  }
 }
