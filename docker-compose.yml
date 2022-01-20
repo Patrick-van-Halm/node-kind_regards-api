@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  api:
+    build: ./
+    depends_on:
+      - db
+    container_name: "api-industry_project"
+    env_file: .env
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
+  db:
+    image: postgres:13.4-buster
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: K5hCa9VjRM78Rp3M
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
